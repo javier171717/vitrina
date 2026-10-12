@@ -1,0 +1,66 @@
+.brand-credit {
+  text-align: center;
+  padding: 8px 16px 4px;
+  color: #57534e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.brand-credit-line { margin: 0; }
+.brand-heart {
+  display: inline-block;
+  color: #e11d48;
+  transform-origin: center;
+  animation: brandHeartbeat 1.6s ease-in-out infinite;
+}
+.brand-code,
+.brand-name {
+  color: var(--brand-accent, #e30613);
+  font-weight: 700;
+}
+.brand-name { letter-spacing: .01em; }
+.brand-credit-tag {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-style: italic;
+  color: #8a847c;
+}
+.brand-wa {
+  position: relative;
+  display: inline-flex;
+  margin-top: 10px;
+  line-height: 0;
+}
+.brand-wa svg { display: block; }
+.brand-wa-tip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #141416;
+  color: #141416;
+  font-size: 12px;
+  font-style: normal;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease;
+}
+.brand-wa:hover .brand-wa-tip,
+.brand-wa:focus-visible .brand-wa-tip { opacity: 1; }
+
+.brand-credit--dark { color: #d6d3d1; padding: 16px 16px 18px; }
+.brand-credit--dark .brand-credit-tag { color: #a8a29a; }
+
+@keyframes brandHeartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.22); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.12); }
+  70% { transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-heart { animation: none; }
+}
